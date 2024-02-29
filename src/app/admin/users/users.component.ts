@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { TableModule } from 'primeng/table';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderpageComponent } from '../../home/headerpage/headerpage.component';
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [TableModule, HttpClientModule],
+  imports: [TableModule, HeaderpageComponent, HttpClientModule],
+  providers: [UserService],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
 })

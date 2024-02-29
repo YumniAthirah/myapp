@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class UserService {
   serverHost = "http://localhost:8080";
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
+  
 
   getUsers(){
     return this.http.get(this.serverHost + "/users");

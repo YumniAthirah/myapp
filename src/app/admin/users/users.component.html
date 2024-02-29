@@ -1,4 +1,4 @@
-
+<app-headerpage></app-headerpage>
 <div class="card">
     <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
@@ -14,7 +14,7 @@
             <tr>
                 <td>{{ user.memberID }}</td>
                 <td>{{ user.name }}</td>
-                <td>{{ user.email.Id }}</td>
+                <td>{{ user.emailId }}</td>
                 <td>{{ user.createdAt }}</td>
                 <td>{{ user.updatedAt }}</td>
             </tr>

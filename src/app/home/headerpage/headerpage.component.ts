@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem } from 'primeng/api/menuitem';
+import { MenubarModule } from 'primeng/menubar';
 
 @Component({
   selector: 'app-headerpage',
   standalone: true,
-  imports: [],
+  imports: [MenubarModule],
   templateUrl: './headerpage.component.html',
-  styleUrl: './headerpage.component.scss'
+  styleUrl: './headerpage.component.scss',
 })
 export class HeaderpageComponent implements OnInit {
   items: MenuItem[] | undefined;
@@ -15,26 +16,29 @@ export class HeaderpageComponent implements OnInit {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-fw pi-file',
-        routerLink: '/contact'
+        icon: 'pi pi-fw pi-Home',
+        routerLink: '/',
       },
       {
         label: 'Users',
         icon: 'pi pi-fw pi-users',
-        routerLink: '/users'
+        routerLink: '/users',
       },
       {
         label: 'Contact',
         icon: 'pi pi-fw pi-phone',
-        routerLink: '/contact'
+        routerLink: '/contact',
       },
       {
         label: 'Login',
         icon: 'pi pi-fw pi-sign-in',
-        routerLink: '/login'
-      }
+        routerLink: '/login',
+      },
+      {
+        label: 'Sign Up',
+        icon: 'pi pi-fw pi-sign-in',
+        routerLink: '/signup',
+      },
     ];
-
-
   }
 }
